@@ -1,0 +1,29 @@
+.badge {
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  border-width: 1px;
+  font-weight: var(--font-weight-5);
+  font-size: var(--font-size-xxs);
+  text-align: center;
+}
+
+.reglament {
+  background-color: var(--color-badge-reglament-bg);
+  color: var(--color-badge-reglament-text);
+
+  border-color: var(--border-color-reglament);
+}
+
+.instruction {
+  background-color: var(--color-badge-instruction-bg);
+  color: var(--color-badge-instruction-text);
+
+  border-color: var(--border-color-instruction);
+}
+
+.order {
+  background-color: var(--color-badge-order-bg);
+  color: var(--color-badge-order-text);
+
+  border-color: var(--border-color-order);
+}
