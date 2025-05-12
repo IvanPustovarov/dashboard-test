@@ -1,0 +1,21 @@
+.textarea {
+  width: 100%;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-6);
+  font-family: inherit;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--color-border-gray-300);
+}

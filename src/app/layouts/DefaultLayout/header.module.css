@@ -1,0 +1,6 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-bg-secondary);
+  padding: 14px 32px;
+}

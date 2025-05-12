@@ -1,0 +1,125 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9;
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background-color: var(--color-bg-primary);
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: -600px;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.container.open {
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color-gray-200);
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.footer {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid var(--border-color-footer);
+  box-shadow: var(--shadow-default);
+}
+
+.textareaContainer {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.documentTitleType {
+  display: flex;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-gray-800);
+}
+
+.documentTitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-gray-500);
+}
+
+.textareaDescription {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--color-text-gray-700);
+  font-weight: var(--font-weight-5);
+  font-size: var(--font-size-md);
+}
+
+.titleContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.dividor {
+  background-color: rgba(111, 113, 124, 0.4);
+  width: 1px;
+  height: 14px;
+}
+
+.closeBar {
+  cursor: pointer;
+}
+
+.nameTypeBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.documentTypeSelector {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.documentTypeText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 180px;
+}
+
+.typeDocName {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-5);
+  color: var(--colot-text-gray-500);
+}

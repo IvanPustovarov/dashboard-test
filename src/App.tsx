@@ -1,28 +1,18 @@
-
-import { useState } from 'react';
-import './App.css'
-import { Badge, Button, Select } from './shared/ui'
+import { Sidebar } from "./features/sidebar/ui/Sidebar"
+import { DefaultLayout } from "./app/layouts/DefaultLayout";
+import { useUIStore } from "./shared/model/store";
 
 function App() {
-  const docTypes = {
-    reglament: 'Регламент',
-    instruction: 'Инструкция',
-    order: 'Распоряжение',
-  } as const;
-
-  const [selectedType, setSelectedType] = useState<keyof typeof docTypes>('reglament');
+const { isSidebarOpen, closeSidebar } = useUIStore();
   return (
-    <>
-      <div>
-        <Button isDisabled={true} isLoading={true}>lol</Button>
-        <Badge type='instruction' />
-        <Select 
-          options={docTypes}
-          value={selectedType}
-          onChange={(val) => setSelectedType(val)}
-        />
-       </div>
-    </>
+    <DefaultLayout>
+      <Sidebar 
+        title="Создание документа" 
+        titleType="Документы"
+        isOpen={isSidebarOpen} 
+        onClose={closeSidebar}
+      />
+    </DefaultLayout>
   )
 }
 

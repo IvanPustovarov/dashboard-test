@@ -1,6 +1,6 @@
 import styles from './badge.module.css'
 
-type BadgeType = 'reglament' | 'instruction' | 'order'
+export type BadgeType = 'reglament' | 'instruction' | 'order'
 
 interface Props {
   type: BadgeType;
